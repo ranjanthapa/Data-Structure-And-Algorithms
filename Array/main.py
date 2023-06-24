@@ -14,7 +14,7 @@ class MyArray:
         return {index: val for index, val in enumerate(data)}
 
     def push(self, item):
-        self.data.append(item)
+        self.data += [item]
         self.length += 1
         print(f"Data {item} pushed")
 
@@ -48,4 +48,5 @@ print()
 newarray.pop()
 newarray.delete(8)
 print(newarray.length)
+print(newarray.data)
 print(MyArray.toDict(newarray.get()))
