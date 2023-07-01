@@ -1,5 +1,4 @@
 from typing import List
-import time 
 
 
 class MergeSortedArray:
@@ -10,7 +9,6 @@ class MergeSortedArray:
 
         return self.mergeSort(new_array)
 
-
     def mergeSort(self, array) -> List[int]:
         if len(array) <= 1:
             return array
@@ -18,14 +16,11 @@ class MergeSortedArray:
         mid = len(array) // 2
         left = self.mergeSort(array[:mid])
         print(left)
-       
 
         right = self.mergeSort(array[mid:])
         print(right)
-        
 
         return self.merge(left, right)
-
 
     def merge(self, left, right) -> List[int]:
         merged = []
@@ -50,11 +45,6 @@ class MergeSortedArray:
         return merged
 
 
-
-
 if __name__ == "__main__":
     arraymerge = MergeSortedArray()
     print(arraymerge.mergeArray(array1=[1, 2, 3, 45, 5, 3], array2=[4, 2, 52, 2, 5, 2]))
-
-
-    
