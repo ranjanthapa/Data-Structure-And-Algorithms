@@ -15,10 +15,11 @@ class HashTable:
         found = False
 
         for idx, element in enumerate(self.data[address]):
-            print(element)
+
             if len(element) == 2 and element[0] == key:
                 self.data[address][idx] = (key, val)
                 found = True
+                break
 
         if not found:
             self.data[address].append((key, val))
